@@ -11,6 +11,7 @@ retriever:
   top_k: 10
 
 llm:
-  provider: "google"
+  provider: "groq"
   # model_name: "deepseek-r1-distill-llama-70b" 
-  model_name: "llama-3-70b-8192"
+  # model_name: "llama-3-70b-8192"
+  model_name: "llama-3.1-8b-instant"
