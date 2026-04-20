@@ -1,5 +1,5 @@
 pinecone_db:
-  PINECONE_INDEX_NAME: "ecommrancerag-v1"  # Changed underscore to hyphen
+  PINECONE_INDEX_NAME: "ecommrancerag-v2"  # Changed underscore to hyphen
 
 embedding_model:
   # provider: "google"

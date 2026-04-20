@@ -31,13 +31,13 @@ class IngestionPipeline:
         """
         load_dotenv()
 
-        required_vars = ["GOOGLE_API_KEY", "PINECONE_API_KEY"]
+        required_vars = ["PINECONE_API_KEY"]  # not requried google api key becuase i use ollama model locally
         
         missing_vars = [var for var in required_vars if os.getenv(var) is None]
         if missing_vars:
             raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
         
-        self.google_api_key = os.getenv("GOOGLE_API_KEY")
+        
         self.pinecone_api_key = os.getenv("PINECONE_API_KEY")
      
 
@@ -138,13 +138,13 @@ class IngestionPipeline:
         documents = self._transform_data()
         vector_store, inserted_ids = self.store_in_vector_db(documents)
         
-         # Optionally do a quick search
-        query = "Can you tell me the low budget headphone?"
-        results = vector_store.similarity_search(query)
+        #  # Optionally do a quick search
+        # query = "Can you tell me the low budget headphone?"
+        # results = vector_store.similarity_search(query)
 
-        print(f"\nSample search results for query: '{query}'")
-        for res in results:
-            print(f"Content: {res.page_content}\nMetadata: {res.metadata}\n")
+        # print(f"\nSample search results for query: '{query}'")
+        # for res in results:
+        #     print(f"Content: {res.page_content}\nMetadata: {res.metadata}\n")
 
 # Run if this file is executed directly
 if __name__ == "__main__":
