@@ -12,4 +12,5 @@ retriever:
 
 llm:
   provider: "google"
-  model_name: "deepseek-r1-distill-llama-70b" 
+  # model_name: "deepseek-r1-distill-llama-70b" 
+  model_name: "llama-3-70b-8192"

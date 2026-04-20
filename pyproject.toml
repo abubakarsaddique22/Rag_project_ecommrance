@@ -6,7 +6,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
+    "fastapi>=0.136.0",
     "ipykernel>=7.2.0",
+    "jinja2>=3.1.6",
     "langchain>=1.2.15",
     "langchain-astradb>=1.0.0",
     "langchain-chroma>=1.1.0",
@@ -14,4 +16,6 @@ dependencies = [
     "langchain-groq>=1.1.2",
     "langchain-ollama>=1.1.0",
     "pandas>=3.0.2",
+    "python-multipart>=0.0.26",
+    "uvicorn>=0.44.0",
 ]
