@@ -108,7 +108,7 @@ class IngestionPipeline:
             print(f"Creating index '{index_name}'...")
             pc.create_index(
                 name=index_name,
-                dimension=384,        # snowflake-arctic-embed:22m = 384
+                dimension=768,        # snowflake-arctic-embed:22m = 384
                 metric="cosine",
                 spec=ServerlessSpec(
                     cloud="aws",

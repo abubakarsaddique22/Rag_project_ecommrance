@@ -2,10 +2,10 @@ pinecone_db:
   PINECONE_INDEX_NAME: "ecommrancerag-v2"  # Changed underscore to hyphen
 
 embedding_model:
-  # provider: "google"
-  # model_name: "gemini-embedding-001"
-  provider: "ollama"
-  model_name: "snowflake-arctic-embed:22m"
+  provider: "google"
+  model_name: "gemini-embedding-001"
+  # provider: "ollama"
+  # model_name: "snowflake-arctic-embed:22m"
 
 retriever:
   top_k: 10

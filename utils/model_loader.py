@@ -24,6 +24,7 @@ class ModelLoader:
         # if "GROQ_API_KEY" in os.environ:
         #     del os.environ["GROQ_API_KEY"]
         self.groq_api_key=os.getenv("GROQ_API_KEY")
+        self.google_api_key=os.getenv("GOOGLE_API_KEY")
         missing_vars = [var for var in required_vars if not os.getenv(var)]
         if missing_vars:
             raise EnvironmentError(f"Missing environment variables: {missing_vars}")
@@ -34,8 +35,8 @@ class ModelLoader:
         """
         print("Loading Embedding model")
         model_name=self.config["embedding_model"]["model_name"]
-        # return GoogleGenerativeAIEmbeddings(model=model_name)
-        return OllamaEmbeddings(model=model_name)
+        return GoogleGenerativeAIEmbeddings(model=model_name)
+        # return OllamaEmbeddings(model=model_name)
 
     def load_llm(self):
         """
